@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12T06:00:00Z",
+  "updated_at": "2026-04-12T16:04:27Z",
   "athlete": {
     "id": "i153108",
     "name": "Giulio Granata"
@@ -9,327 +9,1182 @@
     "atl": 81,
     "tsb": -7,
     "ctl_history": [
-      {"date": "2026-02-11", "value": 42},
-      {"date": "2026-02-12", "value": 43},
-      {"date": "2026-02-13", "value": 44},
-      {"date": "2026-02-14", "value": 45},
-      {"date": "2026-02-15", "value": 46},
-      {"date": "2026-02-16", "value": 47},
-      {"date": "2026-02-17", "value": 48},
-      {"date": "2026-02-18", "value": 49},
-      {"date": "2026-02-19", "value": 50},
-      {"date": "2026-02-20", "value": 51},
-      {"date": "2026-02-21", "value": 52},
-      {"date": "2026-02-22", "value": 53},
-      {"date": "2026-02-23", "value": 54},
-      {"date": "2026-02-24", "value": 55},
-      {"date": "2026-02-25", "value": 55},
-      {"date": "2026-02-26", "value": 56},
-      {"date": "2026-02-27", "value": 57},
-      {"date": "2026-02-28", "value": 58},
-      {"date": "2026-03-01", "value": 58},
-      {"date": "2026-03-02", "value": 59},
-      {"date": "2026-03-03", "value": 60},
-      {"date": "2026-03-04", "value": 61},
-      {"date": "2026-03-05", "value": 62},
-      {"date": "2026-03-06", "value": 62},
-      {"date": "2026-03-07", "value": 63},
-      {"date": "2026-03-08", "value": 63},
-      {"date": "2026-03-09", "value": 64},
-      {"date": "2026-03-10", "value": 65},
-      {"date": "2026-03-11", "value": 65},
-      {"date": "2026-03-12", "value": 66},
-      {"date": "2026-03-13", "value": 66},
-      {"date": "2026-03-14", "value": 67},
-      {"date": "2026-03-15", "value": 67},
-      {"date": "2026-03-16", "value": 68},
-      {"date": "2026-03-17", "value": 68},
-      {"date": "2026-03-18", "value": 69},
-      {"date": "2026-03-19", "value": 69},
-      {"date": "2026-03-20", "value": 70},
-      {"date": "2026-03-21", "value": 70},
-      {"date": "2026-03-22", "value": 70},
-      {"date": "2026-03-23", "value": 71},
-      {"date": "2026-03-24", "value": 71},
-      {"date": "2026-03-25", "value": 72},
-      {"date": "2026-03-26", "value": 72},
-      {"date": "2026-03-27", "value": 72},
-      {"date": "2026-03-28", "value": 73},
-      {"date": "2026-03-29", "value": 72},
-      {"date": "2026-03-30", "value": 72},
-      {"date": "2026-03-31", "value": 73},
-      {"date": "2026-04-01", "value": 73},
-      {"date": "2026-04-02", "value": 73},
-      {"date": "2026-04-03", "value": 74},
-      {"date": "2026-04-04", "value": 74},
-      {"date": "2026-04-05", "value": 74},
-      {"date": "2026-04-06", "value": 73},
-      {"date": "2026-04-07", "value": 73},
-      {"date": "2026-04-08", "value": 74},
-      {"date": "2026-04-09", "value": 74},
-      {"date": "2026-04-10", "value": 74},
-      {"date": "2026-04-11", "value": 74},
-      {"date": "2026-04-12", "value": 74}
+      {
+        "date": "2026-02-11",
+        "value": 42
+      },
+      {
+        "date": "2026-02-12",
+        "value": 43
+      },
+      {
+        "date": "2026-02-13",
+        "value": 44
+      },
+      {
+        "date": "2026-02-14",
+        "value": 45
+      },
+      {
+        "date": "2026-02-15",
+        "value": 46
+      },
+      {
+        "date": "2026-02-16",
+        "value": 47
+      },
+      {
+        "date": "2026-02-17",
+        "value": 48
+      },
+      {
+        "date": "2026-02-18",
+        "value": 49
+      },
+      {
+        "date": "2026-02-19",
+        "value": 50
+      },
+      {
+        "date": "2026-02-20",
+        "value": 51
+      },
+      {
+        "date": "2026-02-21",
+        "value": 52
+      },
+      {
+        "date": "2026-02-22",
+        "value": 53
+      },
+      {
+        "date": "2026-02-23",
+        "value": 54
+      },
+      {
+        "date": "2026-02-24",
+        "value": 55
+      },
+      {
+        "date": "2026-02-25",
+        "value": 55
+      },
+      {
+        "date": "2026-02-26",
+        "value": 56
+      },
+      {
+        "date": "2026-02-27",
+        "value": 57
+      },
+      {
+        "date": "2026-02-28",
+        "value": 58
+      },
+      {
+        "date": "2026-03-01",
+        "value": 58
+      },
+      {
+        "date": "2026-03-02",
+        "value": 59
+      },
+      {
+        "date": "2026-03-03",
+        "value": 60
+      },
+      {
+        "date": "2026-03-04",
+        "value": 61
+      },
+      {
+        "date": "2026-03-05",
+        "value": 62
+      },
+      {
+        "date": "2026-03-06",
+        "value": 62
+      },
+      {
+        "date": "2026-03-07",
+        "value": 63
+      },
+      {
+        "date": "2026-03-08",
+        "value": 63
+      },
+      {
+        "date": "2026-03-09",
+        "value": 64
+      },
+      {
+        "date": "2026-03-10",
+        "value": 65
+      },
+      {
+        "date": "2026-03-11",
+        "value": 65
+      },
+      {
+        "date": "2026-03-12",
+        "value": 66
+      },
+      {
+        "date": "2026-03-13",
+        "value": 66
+      },
+      {
+        "date": "2026-03-14",
+        "value": 67
+      },
+      {
+        "date": "2026-03-15",
+        "value": 67
+      },
+      {
+        "date": "2026-03-16",
+        "value": 68
+      },
+      {
+        "date": "2026-03-17",
+        "value": 68
+      },
+      {
+        "date": "2026-03-18",
+        "value": 69
+      },
+      {
+        "date": "2026-03-19",
+        "value": 69
+      },
+      {
+        "date": "2026-03-20",
+        "value": 70
+      },
+      {
+        "date": "2026-03-21",
+        "value": 70
+      },
+      {
+        "date": "2026-03-22",
+        "value": 70
+      },
+      {
+        "date": "2026-03-23",
+        "value": 71
+      },
+      {
+        "date": "2026-03-24",
+        "value": 71
+      },
+      {
+        "date": "2026-03-25",
+        "value": 72
+      },
+      {
+        "date": "2026-03-26",
+        "value": 72
+      },
+      {
+        "date": "2026-03-27",
+        "value": 72
+      },
+      {
+        "date": "2026-03-28",
+        "value": 73
+      },
+      {
+        "date": "2026-03-29",
+        "value": 72
+      },
+      {
+        "date": "2026-03-30",
+        "value": 72
+      },
+      {
+        "date": "2026-03-31",
+        "value": 73
+      },
+      {
+        "date": "2026-04-01",
+        "value": 73
+      },
+      {
+        "date": "2026-04-02",
+        "value": 73
+      },
+      {
+        "date": "2026-04-03",
+        "value": 74
+      },
+      {
+        "date": "2026-04-04",
+        "value": 74
+      },
+      {
+        "date": "2026-04-05",
+        "value": 74
+      },
+      {
+        "date": "2026-04-06",
+        "value": 73
+      },
+      {
+        "date": "2026-04-07",
+        "value": 73
+      },
+      {
+        "date": "2026-04-08",
+        "value": 74
+      },
+      {
+        "date": "2026-04-09",
+        "value": 74
+      },
+      {
+        "date": "2026-04-10",
+        "value": 74
+      },
+      {
+        "date": "2026-04-11",
+        "value": 74
+      },
+      {
+        "date": "2026-04-12",
+        "value": 74
+      }
     ],
     "atl_history": [
-      {"date": "2026-02-11", "value": 38},
-      {"date": "2026-02-12", "value": 40},
-      {"date": "2026-02-13", "value": 42},
-      {"date": "2026-02-14", "value": 44},
-      {"date": "2026-02-15", "value": 46},
-      {"date": "2026-02-16", "value": 50},
-      {"date": "2026-02-17", "value": 52},
-      {"date": "2026-02-18", "value": 50},
-      {"date": "2026-02-19", "value": 48},
-      {"date": "2026-02-20", "value": 50},
-      {"date": "2026-02-21", "value": 52},
-      {"date": "2026-02-22", "value": 55},
-      {"date": "2026-02-23", "value": 58},
-      {"date": "2026-02-24", "value": 56},
-      {"date": "2026-02-25", "value": 53},
-      {"date": "2026-02-26", "value": 55},
-      {"date": "2026-02-27", "value": 58},
-      {"date": "2026-02-28", "value": 62},
-      {"date": "2026-03-01", "value": 60},
-      {"date": "2026-03-02", "value": 58},
-      {"date": "2026-03-03", "value": 60},
-      {"date": "2026-03-04", "value": 63},
-      {"date": "2026-03-05", "value": 66},
-      {"date": "2026-03-06", "value": 64},
-      {"date": "2026-03-07", "value": 62},
-      {"date": "2026-03-08", "value": 60},
-      {"date": "2026-03-09", "value": 63},
-      {"date": "2026-03-10", "value": 67},
-      {"date": "2026-03-11", "value": 65},
-      {"date": "2026-03-12", "value": 63},
-      {"date": "2026-03-13", "value": 65},
-      {"date": "2026-03-14", "value": 68},
-      {"date": "2026-03-15", "value": 66},
-      {"date": "2026-03-16", "value": 64},
-      {"date": "2026-03-17", "value": 67},
-      {"date": "2026-03-18", "value": 70},
-      {"date": "2026-03-19", "value": 68},
-      {"date": "2026-03-20", "value": 66},
-      {"date": "2026-03-21", "value": 64},
-      {"date": "2026-03-22", "value": 67},
-      {"date": "2026-03-23", "value": 70},
-      {"date": "2026-03-24", "value": 73},
-      {"date": "2026-03-25", "value": 71},
-      {"date": "2026-03-26", "value": 69},
-      {"date": "2026-03-27", "value": 72},
-      {"date": "2026-03-28", "value": 75},
-      {"date": "2026-03-29", "value": 73},
-      {"date": "2026-03-30", "value": 71},
-      {"date": "2026-03-31", "value": 74},
-      {"date": "2026-04-01", "value": 77},
-      {"date": "2026-04-02", "value": 75},
-      {"date": "2026-04-03", "value": 78},
-      {"date": "2026-04-04", "value": 82},
-      {"date": "2026-04-05", "value": 80},
-      {"date": "2026-04-06", "value": 78},
-      {"date": "2026-04-07", "value": 79},
-      {"date": "2026-04-08", "value": 82},
-      {"date": "2026-04-09", "value": 85},
-      {"date": "2026-04-10", "value": 83},
-      {"date": "2026-04-11", "value": 81},
-      {"date": "2026-04-12", "value": 81}
+      {
+        "date": "2026-02-11",
+        "value": 38
+      },
+      {
+        "date": "2026-02-12",
+        "value": 40
+      },
+      {
+        "date": "2026-02-13",
+        "value": 42
+      },
+      {
+        "date": "2026-02-14",
+        "value": 44
+      },
+      {
+        "date": "2026-02-15",
+        "value": 46
+      },
+      {
+        "date": "2026-02-16",
+        "value": 50
+      },
+      {
+        "date": "2026-02-17",
+        "value": 52
+      },
+      {
+        "date": "2026-02-18",
+        "value": 50
+      },
+      {
+        "date": "2026-02-19",
+        "value": 48
+      },
+      {
+        "date": "2026-02-20",
+        "value": 50
+      },
+      {
+        "date": "2026-02-21",
+        "value": 52
+      },
+      {
+        "date": "2026-02-22",
+        "value": 55
+      },
+      {
+        "date": "2026-02-23",
+        "value": 58
+      },
+      {
+        "date": "2026-02-24",
+        "value": 56
+      },
+      {
+        "date": "2026-02-25",
+        "value": 53
+      },
+      {
+        "date": "2026-02-26",
+        "value": 55
+      },
+      {
+        "date": "2026-02-27",
+        "value": 58
+      },
+      {
+        "date": "2026-02-28",
+        "value": 62
+      },
+      {
+        "date": "2026-03-01",
+        "value": 60
+      },
+      {
+        "date": "2026-03-02",
+        "value": 58
+      },
+      {
+        "date": "2026-03-03",
+        "value": 60
+      },
+      {
+        "date": "2026-03-04",
+        "value": 63
+      },
+      {
+        "date": "2026-03-05",
+        "value": 66
+      },
+      {
+        "date": "2026-03-06",
+        "value": 64
+      },
+      {
+        "date": "2026-03-07",
+        "value": 62
+      },
+      {
+        "date": "2026-03-08",
+        "value": 60
+      },
+      {
+        "date": "2026-03-09",
+        "value": 63
+      },
+      {
+        "date": "2026-03-10",
+        "value": 67
+      },
+      {
+        "date": "2026-03-11",
+        "value": 65
+      },
+      {
+        "date": "2026-03-12",
+        "value": 63
+      },
+      {
+        "date": "2026-03-13",
+        "value": 65
+      },
+      {
+        "date": "2026-03-14",
+        "value": 68
+      },
+      {
+        "date": "2026-03-15",
+        "value": 66
+      },
+      {
+        "date": "2026-03-16",
+        "value": 64
+      },
+      {
+        "date": "2026-03-17",
+        "value": 67
+      },
+      {
+        "date": "2026-03-18",
+        "value": 70
+      },
+      {
+        "date": "2026-03-19",
+        "value": 68
+      },
+      {
+        "date": "2026-03-20",
+        "value": 66
+      },
+      {
+        "date": "2026-03-21",
+        "value": 64
+      },
+      {
+        "date": "2026-03-22",
+        "value": 67
+      },
+      {
+        "date": "2026-03-23",
+        "value": 70
+      },
+      {
+        "date": "2026-03-24",
+        "value": 73
+      },
+      {
+        "date": "2026-03-25",
+        "value": 71
+      },
+      {
+        "date": "2026-03-26",
+        "value": 69
+      },
+      {
+        "date": "2026-03-27",
+        "value": 72
+      },
+      {
+        "date": "2026-03-28",
+        "value": 75
+      },
+      {
+        "date": "2026-03-29",
+        "value": 73
+      },
+      {
+        "date": "2026-03-30",
+        "value": 71
+      },
+      {
+        "date": "2026-03-31",
+        "value": 74
+      },
+      {
+        "date": "2026-04-01",
+        "value": 77
+      },
+      {
+        "date": "2026-04-02",
+        "value": 75
+      },
+      {
+        "date": "2026-04-03",
+        "value": 78
+      },
+      {
+        "date": "2026-04-04",
+        "value": 82
+      },
+      {
+        "date": "2026-04-05",
+        "value": 80
+      },
+      {
+        "date": "2026-04-06",
+        "value": 78
+      },
+      {
+        "date": "2026-04-07",
+        "value": 79
+      },
+      {
+        "date": "2026-04-08",
+        "value": 82
+      },
+      {
+        "date": "2026-04-09",
+        "value": 85
+      },
+      {
+        "date": "2026-04-10",
+        "value": 83
+      },
+      {
+        "date": "2026-04-11",
+        "value": 81
+      },
+      {
+        "date": "2026-04-12",
+        "value": 81
+      }
     ],
     "tsb_history": [
-      {"date": "2026-02-11", "value": 4},
-      {"date": "2026-02-12", "value": 3},
-      {"date": "2026-02-13", "value": 2},
-      {"date": "2026-02-14", "value": 1},
-      {"date": "2026-02-15", "value": 0},
-      {"date": "2026-02-16", "value": -3},
-      {"date": "2026-02-17", "value": -4},
-      {"date": "2026-02-18", "value": -1},
-      {"date": "2026-02-19", "value": 2},
-      {"date": "2026-02-20", "value": 1},
-      {"date": "2026-02-21", "value": 0},
-      {"date": "2026-02-22", "value": -2},
-      {"date": "2026-02-23", "value": -4},
-      {"date": "2026-02-24", "value": -1},
-      {"date": "2026-02-25", "value": 2},
-      {"date": "2026-02-26", "value": 1},
-      {"date": "2026-02-27", "value": -1},
-      {"date": "2026-02-28", "value": -4},
-      {"date": "2026-03-01", "value": -2},
-      {"date": "2026-03-02", "value": 1},
-      {"date": "2026-03-03", "value": 0},
-      {"date": "2026-03-04", "value": -2},
-      {"date": "2026-03-05", "value": -4},
-      {"date": "2026-03-06", "value": -2},
-      {"date": "2026-03-07", "value": 1},
-      {"date": "2026-03-08", "value": 3},
-      {"date": "2026-03-09", "value": 1},
-      {"date": "2026-03-10", "value": -2},
-      {"date": "2026-03-11", "value": 0},
-      {"date": "2026-03-12", "value": 3},
-      {"date": "2026-03-13", "value": 1},
-      {"date": "2026-03-14", "value": -1},
-      {"date": "2026-03-15", "value": 1},
-      {"date": "2026-03-16", "value": 4},
-      {"date": "2026-03-17", "value": 1},
-      {"date": "2026-03-18", "value": -1},
-      {"date": "2026-03-19", "value": 1},
-      {"date": "2026-03-20", "value": 4},
-      {"date": "2026-03-21", "value": 6},
-      {"date": "2026-03-22", "value": 3},
-      {"date": "2026-03-23", "value": 1},
-      {"date": "2026-03-24", "value": -2},
-      {"date": "2026-03-25", "value": 1},
-      {"date": "2026-03-26", "value": 3},
-      {"date": "2026-03-27", "value": 0},
-      {"date": "2026-03-28", "value": -2},
-      {"date": "2026-03-29", "value": -1},
-      {"date": "2026-03-30", "value": 1},
-      {"date": "2026-03-31", "value": -1},
-      {"date": "2026-04-01", "value": -4},
-      {"date": "2026-04-02", "value": -2},
-      {"date": "2026-04-03", "value": -4},
-      {"date": "2026-04-04", "value": -8},
-      {"date": "2026-04-05", "value": -6},
-      {"date": "2026-04-06", "value": -5},
-      {"date": "2026-04-07", "value": -6},
-      {"date": "2026-04-08", "value": -8},
-      {"date": "2026-04-09", "value": -11},
-      {"date": "2026-04-10", "value": -9},
-      {"date": "2026-04-11", "value": -7},
-      {"date": "2026-04-12", "value": -7}
+      {
+        "date": "2026-02-11",
+        "value": 4
+      },
+      {
+        "date": "2026-02-12",
+        "value": 3
+      },
+      {
+        "date": "2026-02-13",
+        "value": 2
+      },
+      {
+        "date": "2026-02-14",
+        "value": 1
+      },
+      {
+        "date": "2026-02-15",
+        "value": 0
+      },
+      {
+        "date": "2026-02-16",
+        "value": -3
+      },
+      {
+        "date": "2026-02-17",
+        "value": -4
+      },
+      {
+        "date": "2026-02-18",
+        "value": -1
+      },
+      {
+        "date": "2026-02-19",
+        "value": 2
+      },
+      {
+        "date": "2026-02-20",
+        "value": 1
+      },
+      {
+        "date": "2026-02-21",
+        "value": 0
+      },
+      {
+        "date": "2026-02-22",
+        "value": -2
+      },
+      {
+        "date": "2026-02-23",
+        "value": -4
+      },
+      {
+        "date": "2026-02-24",
+        "value": -1
+      },
+      {
+        "date": "2026-02-25",
+        "value": 2
+      },
+      {
+        "date": "2026-02-26",
+        "value": 1
+      },
+      {
+        "date": "2026-02-27",
+        "value": -1
+      },
+      {
+        "date": "2026-02-28",
+        "value": -4
+      },
+      {
+        "date": "2026-03-01",
+        "value": -2
+      },
+      {
+        "date": "2026-03-02",
+        "value": 1
+      },
+      {
+        "date": "2026-03-03",
+        "value": 0
+      },
+      {
+        "date": "2026-03-04",
+        "value": -2
+      },
+      {
+        "date": "2026-03-05",
+        "value": -4
+      },
+      {
+        "date": "2026-03-06",
+        "value": -2
+      },
+      {
+        "date": "2026-03-07",
+        "value": 1
+      },
+      {
+        "date": "2026-03-08",
+        "value": 3
+      },
+      {
+        "date": "2026-03-09",
+        "value": 1
+      },
+      {
+        "date": "2026-03-10",
+        "value": -2
+      },
+      {
+        "date": "2026-03-11",
+        "value": 0
+      },
+      {
+        "date": "2026-03-12",
+        "value": 3
+      },
+      {
+        "date": "2026-03-13",
+        "value": 1
+      },
+      {
+        "date": "2026-03-14",
+        "value": -1
+      },
+      {
+        "date": "2026-03-15",
+        "value": 1
+      },
+      {
+        "date": "2026-03-16",
+        "value": 4
+      },
+      {
+        "date": "2026-03-17",
+        "value": 1
+      },
+      {
+        "date": "2026-03-18",
+        "value": -1
+      },
+      {
+        "date": "2026-03-19",
+        "value": 1
+      },
+      {
+        "date": "2026-03-20",
+        "value": 4
+      },
+      {
+        "date": "2026-03-21",
+        "value": 6
+      },
+      {
+        "date": "2026-03-22",
+        "value": 3
+      },
+      {
+        "date": "2026-03-23",
+        "value": 1
+      },
+      {
+        "date": "2026-03-24",
+        "value": -2
+      },
+      {
+        "date": "2026-03-25",
+        "value": 1
+      },
+      {
+        "date": "2026-03-26",
+        "value": 3
+      },
+      {
+        "date": "2026-03-27",
+        "value": 0
+      },
+      {
+        "date": "2026-03-28",
+        "value": -2
+      },
+      {
+        "date": "2026-03-29",
+        "value": -1
+      },
+      {
+        "date": "2026-03-30",
+        "value": 1
+      },
+      {
+        "date": "2026-03-31",
+        "value": -1
+      },
+      {
+        "date": "2026-04-01",
+        "value": -4
+      },
+      {
+        "date": "2026-04-02",
+        "value": -2
+      },
+      {
+        "date": "2026-04-03",
+        "value": -4
+      },
+      {
+        "date": "2026-04-04",
+        "value": -8
+      },
+      {
+        "date": "2026-04-05",
+        "value": -6
+      },
+      {
+        "date": "2026-04-06",
+        "value": -5
+      },
+      {
+        "date": "2026-04-07",
+        "value": -6
+      },
+      {
+        "date": "2026-04-08",
+        "value": -8
+      },
+      {
+        "date": "2026-04-09",
+        "value": -11
+      },
+      {
+        "date": "2026-04-10",
+        "value": -9
+      },
+      {
+        "date": "2026-04-11",
+        "value": -7
+      },
+      {
+        "date": "2026-04-12",
+        "value": -7
+      }
     ]
   },
   "wellness": {
-    "hrv": 58,
-    "resting_hr": 48,
-    "sleep_hours": 7.2,
+    "hrv": null,
+    "resting_hr": null,
+    "sleep_hours": 0,
     "energy": 3,
     "history": [
-      {"date": "2026-03-30", "hrv": 62, "resting_hr": 46, "sleep_hours": 7.5, "energy": 4},
-      {"date": "2026-03-31", "hrv": 60, "resting_hr": 47, "sleep_hours": 7.0, "energy": 3},
-      {"date": "2026-04-01", "hrv": 55, "resting_hr": 50, "sleep_hours": 6.5, "energy": 2},
-      {"date": "2026-04-02", "hrv": 57, "resting_hr": 49, "sleep_hours": 7.0, "energy": 3},
-      {"date": "2026-04-03", "hrv": 53, "resting_hr": 51, "sleep_hours": 6.8, "energy": 2},
-      {"date": "2026-04-04", "hrv": 50, "resting_hr": 52, "sleep_hours": 6.5, "energy": 2},
-      {"date": "2026-04-05", "hrv": 54, "resting_hr": 50, "sleep_hours": 7.2, "energy": 3},
-      {"date": "2026-04-06", "hrv": 56, "resting_hr": 49, "sleep_hours": 7.5, "energy": 3},
-      {"date": "2026-04-07", "hrv": 52, "resting_hr": 51, "sleep_hours": 6.8, "energy": 2},
-      {"date": "2026-04-08", "hrv": 49, "resting_hr": 53, "sleep_hours": 6.5, "energy": 2},
-      {"date": "2026-04-09", "hrv": 46, "resting_hr": 54, "sleep_hours": 6.3, "energy": 1},
-      {"date": "2026-04-10", "hrv": 51, "resting_hr": 51, "sleep_hours": 7.0, "energy": 3},
-      {"date": "2026-04-11", "hrv": 55, "resting_hr": 49, "sleep_hours": 7.3, "energy": 3},
-      {"date": "2026-04-12", "hrv": 58, "resting_hr": 48, "sleep_hours": 7.2, "energy": 3}
+      {
+        "date": "2026-03-14",
+        "hrv": null,
+        "resting_hr": 122,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-15",
+        "hrv": null,
+        "resting_hr": 133,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-16",
+        "hrv": null,
+        "resting_hr": 134,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-17",
+        "hrv": null,
+        "resting_hr": 129,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-18",
+        "hrv": null,
+        "resting_hr": 127,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-19",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-20",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-21",
+        "hrv": null,
+        "resting_hr": 58,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-22",
+        "hrv": null,
+        "resting_hr": 135,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-23",
+        "hrv": null,
+        "resting_hr": 127,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-24",
+        "hrv": null,
+        "resting_hr": 113,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-25",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-26",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-27",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-28",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-29",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-30",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-03-31",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-01",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-02",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-03",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-04",
+        "hrv": null,
+        "resting_hr": 86,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-05",
+        "hrv": null,
+        "resting_hr": 100,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-06",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-07",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-08",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-09",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-10",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-11",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      },
+      {
+        "date": "2026-04-12",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
+      }
     ]
   },
   "activities": [
     {
-      "id": "act001",
+      "id": "i139051049",
       "date": "2026-04-12",
-      "name": "Uscita mattutina — zone 2",
-      "duration_seconds": 7200,
-      "distance_meters": 72000,
-      "normalized_power": 185,
-      "intensity_factor": 0.69,
-      "tss": 70,
-      "type": "Ride"
+      "name": "Zwift - Rulli: Forza regressiva e Forza Esplosiva",
+      "duration_seconds": 5020,
+      "distance_meters": 56154.39,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
     },
     {
-      "id": "act002",
+      "id": "i138817867",
+      "date": "2026-04-11",
+      "name": "Zwift - Rulli: Simulazione Distanza Specifica (1)",
+      "duration_seconds": 5249,
+      "distance_meters": 53960.84,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
+    {
+      "id": "i138580861",
       "date": "2026-04-10",
-      "name": "Intervalli soglia",
-      "duration_seconds": 5400,
-      "distance_meters": 56000,
-      "normalized_power": 230,
-      "intensity_factor": 0.86,
-      "tss": 108,
-      "type": "Ride"
+      "name": "Zwift - Pacer",
+      "duration_seconds": 3626,
+      "distance_meters": 39012.23,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
     },
     {
-      "id": "act003",
+      "id": "i138316504",
       "date": "2026-04-09",
-      "name": "Uscita lunga endurance",
-      "duration_seconds": 14400,
-      "distance_meters": 135000,
-      "normalized_power": 178,
-      "intensity_factor": 0.67,
-      "tss": 134,
-      "type": "Ride"
+      "name": "Zwift - Rulli : Z2",
+      "duration_seconds": 5026,
+      "distance_meters": 53605.15,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
     },
     {
-      "id": "act004",
+      "id": "i138020648",
+      "date": "2026-04-08",
+      "name": "Zwift - Rulli: Z2",
+      "duration_seconds": 5361,
+      "distance_meters": 57603.22,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
+    {
+      "id": "i137774193",
       "date": "2026-04-07",
-      "name": "Sprint e ripetute collinari",
-      "duration_seconds": 6300,
-      "distance_meters": 65000,
-      "normalized_power": 245,
-      "intensity_factor": 0.92,
-      "tss": 122,
-      "type": "Ride"
+      "name": "Zwift - Pacer",
+      "duration_seconds": 5457,
+      "distance_meters": 58325.61,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
     },
     {
-      "id": "act005",
+      "id": "i137518201",
       "date": "2026-04-06",
-      "name": "Recupero attivo",
-      "duration_seconds": 3600,
-      "distance_meters": 32000,
-      "normalized_power": 155,
-      "intensity_factor": 0.58,
-      "tss": 35,
-      "type": "Ride"
+      "name": "Zwift - Pacer",
+      "duration_seconds": 5019,
+      "distance_meters": 52632.36,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
     },
     {
-      "id": "act006",
+      "id": "i137328570",
       "date": "2026-04-05",
-      "name": "Gran fondo simulazione",
-      "duration_seconds": 18000,
-      "distance_meters": 168000,
-      "normalized_power": 210,
-      "intensity_factor": 0.79,
-      "tss": 186,
+      "name": "Zwift - Pacer",
+      "duration_seconds": 4520,
+      "distance_meters": 50131.16,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
+    {
+      "id": "i137309458",
+      "date": "2026-04-05",
+      "name": "Milano Ciclismo su strada",
+      "duration_seconds": 1559,
+      "distance_meters": 12035.97,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
       "type": "Ride"
     },
     {
-      "id": "act007",
+      "id": "i137095948",
+      "date": "2026-04-04",
+      "name": "Milano Ciclismo su strada",
+      "duration_seconds": 7448,
+      "distance_meters": 64358.19,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "Ride"
+    },
+    {
+      "id": "i136831004",
       "date": "2026-04-03",
-      "name": "VO2max — 4x5min",
-      "duration_seconds": 5100,
-      "distance_meters": 52000,
-      "normalized_power": 265,
-      "intensity_factor": 0.99,
-      "tss": 95,
-      "type": "Ride"
+      "name": "Zwift - Pacer",
+      "duration_seconds": 4085,
+      "distance_meters": 41765.98,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
     },
     {
-      "id": "act008",
+      "id": "i136610069",
+      "date": "2026-04-02",
+      "name": "Zwift - Pacer",
+      "duration_seconds": 4527,
+      "distance_meters": 50517.69,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
+    {
+      "id": "i136368469",
       "date": "2026-04-01",
-      "name": "Lungo aerobico",
-      "duration_seconds": 12600,
-      "distance_meters": 118000,
-      "normalized_power": 182,
-      "intensity_factor": 0.68,
-      "tss": 112,
-      "type": "Ride"
+      "name": "Zwift - Pacer",
+      "duration_seconds": 4814,
+      "distance_meters": 51568.16,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
     },
     {
-      "id": "act009",
+      "id": "i136081137",
+      "date": "2026-03-31",
+      "name": "Zwift - Pacer",
+      "duration_seconds": 4812,
+      "distance_meters": 53147.27,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
+    {
+      "id": "i135829559",
       "date": "2026-03-30",
-      "name": "Colline miste",
-      "duration_seconds": 9000,
-      "distance_meters": 83000,
-      "normalized_power": 215,
-      "intensity_factor": 0.81,
-      "tss": 118,
-      "type": "Ride"
+      "name": "Zwift - Pacer",
+      "duration_seconds": 5443,
+      "distance_meters": 58317.73,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
     },
     {
-      "id": "act010",
+      "id": "i135563982",
+      "date": "2026-03-29",
+      "name": "Zwift - Pacer",
+      "duration_seconds": 5497,
+      "distance_meters": 61005.85,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
+    {
+      "id": "i135319328",
       "date": "2026-03-28",
-      "name": "Sweet spot 2x20min",
-      "duration_seconds": 6600,
-      "distance_meters": 62000,
-      "normalized_power": 225,
-      "intensity_factor": 0.84,
-      "tss": 98,
-      "type": "Ride"
+      "name": "Zwift - TT: Stage 6a: Zwift Games: Epiloch",
+      "duration_seconds": 1019,
+      "distance_meters": 11534.61,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
+    {
+      "id": "i135317052",
+      "date": "2026-03-28",
+      "name": "Zwift - Pacer",
+      "duration_seconds": 4532,
+      "distance_meters": 50142.18,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
+    {
+      "id": "i135084024",
+      "date": "2026-03-27",
+      "name": "Zwift - 0",
+      "duration_seconds": 3789,
+      "distance_meters": 39642.56,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
+    {
+      "id": "i134862012",
+      "date": "2026-03-26",
+      "name": "Zwift - 4",
+      "duration_seconds": 4661,
+      "distance_meters": 52014.32,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
     }
   ]
 }
