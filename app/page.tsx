@@ -1,9 +1,7 @@
 // Dashboard home — legge i dati da /api/data e compone i componenti
 // Server Component: fetch server-side, nessun loading state necessario
 
-import { readFileSync } from 'fs';
-import { join } from 'path';
-import type { AthleteData } from '@/lib/types';
+import { getAthleteData } from '@/lib/data';
 import StatusBar from '@/components/dashboard/StatusBar';
 import MetricCard from '@/components/dashboard/MetricCard';
 import CTLATLChart from '@/components/dashboard/CTLATLChart';
@@ -11,25 +9,8 @@ import TSBChart from '@/components/dashboard/TSBChart';
 import ActivityList from '@/components/dashboard/ActivityList';
 import WellnessPanel from '@/components/dashboard/WellnessPanel';
 
-// Legge i dati direttamente — in produzione userà l'API route tramite fetch
-async function getData(): Promise<AthleteData> {
-  // In sviluppo: legge il file direttamente per evitare dipendenze da URL assoluto
-  if (process.env.NODE_ENV === 'development') {
-    const filePath = join(process.cwd(), 'data', 'latest.json');
-    const raw = readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as AthleteData;
-  }
-  // Produzione: chiama l'API route
-  const baseUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : 'http://localhost:3000';
-  const res = await fetch(`${baseUrl}/api/data`, { next: { revalidate: 3600 } });
-  if (!res.ok) throw new Error('Impossibile caricare i dati');
-  return res.json() as Promise<AthleteData>;
-}
-
 export default async function HomePage() {
-  const data = await getData();
+  const data = await getAthleteData();
   const { fitness, wellness, activities } = data;
 
   // Calcola i delta rispetto al giorno precedente per le MetricCard
