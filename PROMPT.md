@@ -15,7 +15,7 @@ Tutti i dettagli architetturali, le scelte tecniche, il routing e la struttura c
 ## Regole generali
 
 - **TypeScript strict** — nessun `any`, tipi espliciti ovunque
-- **App Router** — usa sempre Next.js 14 App Router, mai Pages Router
+- **App Router** — usa sempre Next.js Latest App Router, mai Pages Router
 - **Server Components di default** — usa `'use client'` solo dove strettamente necessario (interazioni, stato, browser APIs)
 - **Tailwind** — nessun CSS custom file, tutto Tailwind utility classes
 - **Nessun DB** — i dati vengono solo da `latest.json` via `/api/data`
@@ -48,6 +48,7 @@ Crea la struttura cartelle esatta descritta in `PLAN.md`.
 Prima di collegare i dati reali, crea `data/latest.json` con dati mock realistici seguendo esattamente la struttura definita in `PLAN.md` nella sezione "Struttura attesa".
 
 I dati mock devono includere:
+
 - Storico CTL/ATL/TSB degli ultimi 60 giorni (array di oggetti `{date, value}`)
 - Wellness degli ultimi 14 giorni
 - Almeno 10 attività recenti
@@ -59,6 +60,7 @@ I dati mock devono includere:
 Costruisci prima il layout shell completo prima di qualsiasi contenuto:
 
 ### Sidebar (`components/layout/Sidebar.tsx`)
+
 - Larghezza 220px espansa, 60px collassata
 - Toggle button con icona hamburger/freccia
 - Stato collasso in localStorage (key: `sidebar-collapsed`)
@@ -68,16 +70,19 @@ Costruisci prima il layout shell completo prima di qualsiasi contenuto:
 - Smooth transition CSS su width
 
 ### Topbar (`components/layout/Topbar.tsx`)
+
 - Logo con nome "PedalAI"
 - Avatar con iniziali "GG"
 - Altezza 52px, border-bottom
 
 ### BottomNav (`components/layout/BottomNav.tsx`)
+
 - Visibile solo su mobile (`md:hidden`)
 - 3 voci: Dashboard, Chat, Settings
 - `position: fixed; bottom: 0`
 
 ### Layout root (`app/layout.tsx`)
+
 - Grid: sidebar + main content su desktop
 - ThemeProvider da `next-themes` wrappa tutto
 - `suppressHydrationWarning` su `<html>`
@@ -115,11 +120,13 @@ Ogni componente è un Server Component che riceve i dati come props da `page.tsx
 ## Fase 6 — Sottopagine
 
 ### `/ctl-atl/page.tsx`
+
 - Grafico storico espanso CTL/ATL/TSB a 90 giorni
 - Spiegazione testuale delle metriche
 - Tabella ultime 4 settimane con valori puntuali
 
 ### `/hrv/page.tsx`
+
 - Grafico HRV trend ultimi 30 giorni
 - Grafico resting HR trend
 - Grafico ore sonno
@@ -176,6 +183,7 @@ Regole:
 ```
 
 ### ChatPanel (`components/chat/ChatPanel.tsx`)
+
 - Client component con useState per messaggi e input
 - Streaming della risposta (reader su fetch response body)
 - Parsing JSON inline per grafici — se il messaggio contiene `{"type":"chart"...}` renderizza un `<RecChart />` inline
@@ -203,6 +211,7 @@ Crea `middleware.ts` nella root:
 ```
 
 Crea `app/login/page.tsx`:
+
 - Form con campo password
 - POST a `/api/auth/route.ts`
 - Se password corretta (confronto con `AUTH_PASSWORD` env var) → setta cookie httpOnly → redirect a `/`
@@ -227,6 +236,7 @@ GITHUB_RAW_DATA_URL=https://raw.githubusercontent.com/giulioGranata/pedal-ai/mai
 ## Colori e design
 
 Segui il mockup approvato:
+
 - **Accent color**: `#1D9E75` (teal ciclismo)
 - **Font**: system font stack (no Google Fonts)
 - **Border**: `border-gray-200 dark:border-gray-800`, sempre 1px

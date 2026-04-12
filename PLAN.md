@@ -8,7 +8,7 @@ Web app personale per Giulio Granata. Dashboard ciclismo alimentata da dati Inte
 
 ## Stack
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js Latest (App Router)
 - **Linguaggio**: TypeScript
 - **Styling**: Tailwind CSS
 - **AI**: Anthropic Claude API (claude-sonnet-4-20250514)
@@ -80,19 +80,20 @@ pedal-ai/
 
 ## Routing
 
-| Route | Descrizione |
-|---|---|
-| `/` | Dashboard home — metriche + grafici + attività |
-| `/ctl-atl` | Dettaglio CTL, ATL, TSB — grafico storico espanso |
-| `/hrv` | Dettaglio HRV, resting HR, wellness trend |
-| `/chat` | Chat AI con contesto dati completo |
-| `/settings` | Tema (chiaro/scuro/sistema), configurazione |
+| Route       | Descrizione                                       |
+| ----------- | ------------------------------------------------- |
+| `/`         | Dashboard home — metriche + grafici + attività    |
+| `/ctl-atl`  | Dettaglio CTL, ATL, TSB — grafico storico espanso |
+| `/hrv`      | Dettaglio HRV, resting HR, wellness trend         |
+| `/chat`     | Chat AI con contesto dati completo                |
+| `/settings` | Tema (chiaro/scuro/sistema), configurazione       |
 
 ---
 
 ## Layout — ispirazione YouTube
 
 ### Desktop
+
 ```
 ┌─────────────────────────────────────────────────┐
 │ TOPBAR (logo + avatar)                          │
@@ -111,6 +112,7 @@ pedal-ai/
 - Transizione CSS smooth
 
 ### Mobile
+
 ```
 ┌─────────────────┐
 │ TOPBAR          │
@@ -205,7 +207,7 @@ name: Sync Intervals.icu data
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -215,7 +217,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
       - run: pip install requests
       - run: python scripts/sync.py
         env:
