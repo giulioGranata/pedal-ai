@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* Variabili tema — dark mode gestita da next-themes con class strategy */
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #f0f0f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: #1D9E75;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Smooth scroll globale */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar sottile per desktop */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #374151;
+}
