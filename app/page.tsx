@@ -1,9 +1,99 @@
-// Placeholder pagina home — verrà sostituita nella Fase 5 con la Dashboard completa
-export default function HomePage() {
+// Dashboard home — legge i dati da /api/data e compone i componenti
+// Server Component: fetch server-side, nessun loading state necessario
+
+import { readFileSync } from 'fs';
+import { join } from 'path';
+import type { AthleteData } from '@/lib/types';
+import StatusBar from '@/components/dashboard/StatusBar';
+import MetricCard from '@/components/dashboard/MetricCard';
+import CTLATLChart from '@/components/dashboard/CTLATLChart';
+import TSBChart from '@/components/dashboard/TSBChart';
+import ActivityList from '@/components/dashboard/ActivityList';
+import WellnessPanel from '@/components/dashboard/WellnessPanel';
+
+// Legge i dati direttamente — in produzione userà l'API route tramite fetch
+async function getData(): Promise<AthleteData> {
+  // In sviluppo: legge il file direttamente per evitare dipendenze da URL assoluto
+  if (process.env.NODE_ENV === 'development') {
+    const filePath = join(process.cwd(), 'data', 'latest.json');
+    const raw = readFileSync(filePath, 'utf-8');
+    return JSON.parse(raw) as AthleteData;
+  }
+  // Produzione: chiama l'API route
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : 'http://localhost:3000';
+  const res = await fetch(`${baseUrl}/api/data`, { next: { revalidate: 3600 } });
+  if (!res.ok) throw new Error('Impossibile caricare i dati');
+  return res.json() as Promise<AthleteData>;
+}
+
+export default async function HomePage() {
+  const data = await getData();
+  const { fitness, wellness, activities } = data;
+
+  // Calcola i delta rispetto al giorno precedente per le MetricCard
+  const ctlHist = fitness.ctl_history;
+  const atlHist = fitness.atl_history;
+  const tsbHist = fitness.tsb_history;
+  const ctlDelta = ctlHist.length >= 2 ? fitness.ctl - ctlHist[ctlHist.length - 2].value : 0;
+  const atlDelta = atlHist.length >= 2 ? fitness.atl - atlHist[atlHist.length - 2].value : 0;
+  const tsbDelta = tsbHist.length >= 2 ? fitness.tsb - tsbHist[tsbHist.length - 2].value : 0;
+
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-medium text-gray-900 dark:text-gray-100">Dashboard</h1>
-      <p className="mt-2 text-gray-500 dark:text-gray-400">In costruzione — Fase 5</p>
+    <div className="max-w-5xl mx-auto px-4 py-6 space-y-6">
+
+      {/* Banner stato forma */}
+      <StatusBar tsb={fitness.tsb} atl={fitness.atl} ctl={fitness.ctl} />
+
+      {/* Grid metriche principali */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <MetricCard
+          label="CTL"
+          value={fitness.ctl}
+          delta={ctlDelta}
+          href="/ctl-atl"
+          description="Fitness cronica — media carico allenamento 42 giorni"
+        />
+        <MetricCard
+          label="ATL"
+          value={fitness.atl}
+          delta={atlDelta}
+          href="/ctl-atl"
+          description="Fatica acuta — media carico allenamento 7 giorni"
+        />
+        <MetricCard
+          label="TSB"
+          value={fitness.tsb}
+          delta={tsbDelta}
+          href="/ctl-atl"
+          description="Forma — CTL meno ATL. Negativo = in carico"
+        />
+        <MetricCard
+          label="HRV"
+          value={wellness.hrv}
+          unit="ms"
+          href="/hrv"
+          description="Variabilità frequenza cardiaca mattutina"
+        />
+      </div>
+
+      {/* Grafici CTL/ATL e TSB affiancati su desktop */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <CTLATLChart ctlHistory={fitness.ctl_history} atlHistory={fitness.atl_history} />
+        <TSBChart tsbHistory={fitness.tsb_history} />
+      </div>
+
+      {/* Lista attività + pannello wellness affiancati su desktop */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="lg:col-span-2">
+          <ActivityList activities={activities} />
+        </div>
+        <div>
+          <WellnessPanel wellness={wellness} />
+        </div>
+      </div>
+
     </div>
   );
 }

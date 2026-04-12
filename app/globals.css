@@ -2,13 +2,13 @@
 
 /* Variabili tema — dark mode gestita da next-themes con class strategy */
 :root {
-  --background: #ffffff;
-  --foreground: #111111;
+  --background: #f9fafb; /* gray-50 — sfondo pagina leggermente grigio */
+  --foreground: #111827;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #f0f0f0;
+  --background: #09090b; /* quasi nero */
+  --foreground: #f4f4f5;
 }
 
 @theme inline {
