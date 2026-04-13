@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12T16:04:27Z",
+  "updated_at": "2026-04-13T11:15:20Z",
   "athlete": {
     "id": "i153108",
     "name": "Giulio Granata"
@@ -754,13 +754,6 @@
     "energy": 3,
     "history": [
       {
-        "date": "2026-03-14",
-        "hrv": null,
-        "resting_hr": 122,
-        "sleep_hours": null,
-        "energy": null
-      },
-      {
         "date": "2026-03-15",
         "hrv": null,
         "resting_hr": 133,
@@ -962,10 +955,28 @@
         "resting_hr": null,
         "sleep_hours": null,
         "energy": null
+      },
+      {
+        "date": "2026-04-13",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
       }
     ]
   },
   "activities": [
+    {
+      "id": "i139345597",
+      "date": "2026-04-13",
+      "name": "Zwift - Rulli : Z2",
+      "duration_seconds": 5008,
+      "distance_meters": 53242.3,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
     {
       "id": "i139051049",
       "date": "2026-04-12",
@@ -1170,17 +1181,6 @@
       "name": "Zwift - 0",
       "duration_seconds": 3789,
       "distance_meters": 39642.56,
-      "normalized_power": 0,
-      "intensity_factor": 0,
-      "tss": 0,
-      "type": "VirtualRide"
-    },
-    {
-      "id": "i134862012",
-      "date": "2026-03-26",
-      "name": "Zwift - 4",
-      "duration_seconds": 4661,
-      "distance_meters": 52014.32,
       "normalized_power": 0,
       "intensity_factor": 0,
       "tss": 0,
