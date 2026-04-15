@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-14T16:09:36Z",
+  "updated_at": "2026-04-15T10:56:17Z",
   "athlete": {
     "id": "i153108",
     "name": "Giulio Granata"
@@ -754,13 +754,6 @@
     "energy": 3,
     "history": [
       {
-        "date": "2026-03-16",
-        "hrv": null,
-        "resting_hr": 134,
-        "sleep_hours": null,
-        "energy": null
-      },
-      {
         "date": "2026-03-17",
         "hrv": null,
         "resting_hr": 129,
@@ -962,10 +955,28 @@
         "resting_hr": null,
         "sleep_hours": null,
         "energy": null
+      },
+      {
+        "date": "2026-04-15",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
       }
     ]
   },
   "activities": [
+    {
+      "id": "i139942716",
+      "date": "2026-04-15",
+      "name": "Zwift - Pacer",
+      "duration_seconds": 4519,
+      "distance_meters": 48756.13,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
     {
       "id": "i139637380",
       "date": "2026-04-14",
@@ -1170,17 +1181,6 @@
       "name": "Zwift - TT: Stage 6a: Zwift Games: Epiloch",
       "duration_seconds": 1019,
       "distance_meters": 11534.61,
-      "normalized_power": 0,
-      "intensity_factor": 0,
-      "tss": 0,
-      "type": "VirtualRide"
-    },
-    {
-      "id": "i135317052",
-      "date": "2026-03-28",
-      "name": "Zwift - Pacer",
-      "duration_seconds": 4532,
-      "distance_meters": 50142.18,
       "normalized_power": 0,
       "intensity_factor": 0,
       "tss": 0,
