@@ -60,13 +60,3 @@ export interface ChatMessage {
   role: 'user' | 'assistant';
   content: string;
 }
-
-// Tipo per i grafici inline generati dall'AI
-export interface ChartData {
-  type: 'chart';
-  chartType: 'line' | 'bar';
-  title: string;
-  data: Record<string, unknown>[];
-  xKey: string;
-  yKeys: string[];
-}

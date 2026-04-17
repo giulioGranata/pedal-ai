@@ -3,7 +3,7 @@
 // CTLATLChart — grafico a linee CTL vs ATL (ultime 8 settimane)
 // Client Component necessario per recharts
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import {
   LineChart,
   Line,
@@ -14,6 +14,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import type { HistoryPoint } from '@/lib/types';
+import { formatShortDate } from '@/lib/date';
 
 interface CTLATLChartProps {
   ctlHistory: HistoryPoint[];
@@ -88,18 +89,12 @@ function CustomLegend() {
   );
 }
 
-// Formatta la data in formato breve (es. "12 Apr")
-function formatDate(dateStr: string): string {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('it-IT', { day: 'numeric', month: 'short' });
-}
-
 // Combina i due array di history in un array di oggetti per recharts
 function mergeHistories(ctl: HistoryPoint[], atl: HistoryPoint[]) {
   const atlMap = new Map(atl.map((p) => [p.date, p.value]));
   return ctl.map((p) => ({
     date: p.date,
-    label: formatDate(p.date),
+    label: formatShortDate(p.date),
     CTL: p.value,
     ATL: atlMap.get(p.date) ?? null,
   }));
@@ -128,7 +123,7 @@ export default function CTLATLChart({ ctlHistory, atlHistory }: CTLATLChartProps
   // Ultimi 56 giorni (8 settimane)
   const last56 = ctlHistory.slice(-56);
   const atlLast56 = atlHistory.slice(-56);
-  const data = mergeHistories(last56, atlLast56);
+  const data = useMemo(() => mergeHistories(last56, atlLast56), [last56, atlLast56]);
 
   return (
     <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4">

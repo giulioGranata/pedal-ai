@@ -1,6 +1,8 @@
 // StatusBar — banner in cima alla dashboard con suggerimento del giorno
 // Server Component, testo statico per ora (sarà collegato all'AI in seguito)
 
+import { TSB_THRESHOLDS } from '@/lib/thresholds';
+
 interface StatusBarProps {
   tsb: number;
   atl: number;
@@ -15,7 +17,7 @@ function getStatus(tsb: number, atl: number, ctl: number): {
   border: string;
   dot: string;
 } {
-  if (tsb < -15) {
+  if (tsb < TSB_THRESHOLDS.heavyLoad) {
     return {
       message: `Carico elevato — TSB a ${tsb}. Considera una giornata di recupero attivo o riposo.`,
       color: 'text-red-700 dark:text-red-300',
@@ -24,7 +26,7 @@ function getStatus(tsb: number, atl: number, ctl: number): {
       dot: 'bg-red-500',
     };
   }
-  if (tsb >= -5 && tsb <= 5) {
+  if (tsb >= TSB_THRESHOLDS.balancedMin && tsb <= TSB_THRESHOLDS.balancedMax) {
     return {
       message: `Forma bilanciata — TSB a ${tsb}. Ottimo per allenamenti di qualità o gare.`,
       color: 'text-emerald-700 dark:text-emerald-300',
@@ -33,7 +35,7 @@ function getStatus(tsb: number, atl: number, ctl: number): {
       dot: 'bg-emerald-500',
     };
   }
-  if (tsb > 10) {
+  if (tsb > TSB_THRESHOLDS.recovery) {
     return {
       message: `In recupero — TSB a ${tsb}. Corpo ricaricato, perfetto per un'uscita intensa.`,
       color: 'text-blue-700 dark:text-blue-300',

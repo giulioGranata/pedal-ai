@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { COOKIE_NAME, DEFAULT_TTL_SECONDS, createAuthToken } from '@/lib/auth';
 
 export async function POST(req: Request) {
   try {
@@ -16,21 +17,23 @@ export async function POST(req: Request) {
       console.warn("ATTENZIONE: AUTH_PASSWORD non è settata nel file .env.local, chiunque può accedere.");
     }
 
+    const token = await createAuthToken(DEFAULT_TTL_SECONDS);
+
     // Risposta con Set-Cookie Header
     const response = NextResponse.json({ success: true }, { status: 200 });
     
     response.cookies.set({
-      name: 'pedal-auth',
-      value: 'authenticated_user',
+      name: COOKIE_NAME,
+      value: token,
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
       path: '/',
-      maxAge: 60 * 60 * 24 * 30, // 30 giorni
+      maxAge: DEFAULT_TTL_SECONDS,
     });
 
     return response;
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Errore interno' }, { status: 500 });
   }
 }

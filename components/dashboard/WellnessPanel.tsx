@@ -2,6 +2,7 @@
 // Server Component
 
 import type { WellnessData } from '@/lib/types';
+import { WELLNESS_THRESHOLDS } from '@/lib/thresholds';
 
 interface WellnessPanelProps {
   wellness: WellnessData;
@@ -48,13 +49,16 @@ function energyLabel(energy: number): string {
 
 export default function WellnessPanel({ wellness }: WellnessPanelProps) {
   // HRV: range indicativo 30-100ms — normalizzato su 100
-  const hrvPercent = ((wellness.hrv - 30) / 70) * 100;
+  const hrvRange = WELLNESS_THRESHOLDS.hrvMax - WELLNESS_THRESHOLDS.hrvMin;
+  const hrvPercent = ((wellness.hrv - WELLNESS_THRESHOLDS.hrvMin) / hrvRange) * 100;
 
   // Resting HR: range 35-75bpm — lower is better, invertiamo
-  const hrPercent = ((75 - wellness.resting_hr) / 40) * 100;
+  const hrRange = WELLNESS_THRESHOLDS.restingHrMax - WELLNESS_THRESHOLDS.restingHrMin;
+  const hrPercent = ((WELLNESS_THRESHOLDS.restingHrMax - wellness.resting_hr) / hrRange) * 100;
 
   // Sonno: range 5-10h — normalizzato su 100
-  const sleepPercent = ((wellness.sleep_hours - 5) / 5) * 100;
+  const sleepRange = WELLNESS_THRESHOLDS.sleepMaxHours - WELLNESS_THRESHOLDS.sleepMinHours;
+  const sleepPercent = ((wellness.sleep_hours - WELLNESS_THRESHOLDS.sleepMinHours) / sleepRange) * 100;
 
   return (
     <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4">

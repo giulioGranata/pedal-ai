@@ -31,7 +31,7 @@ export default function LoginPage() {
         const data = await res.json();
         setError(data.error || 'Autenticazione fallita');
       }
-    } catch (err) {
+    } catch {
       setError('Errore di connessione. Riprova.');
     } finally {
       setLoading(false);

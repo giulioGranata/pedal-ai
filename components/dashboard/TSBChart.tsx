@@ -15,6 +15,7 @@ import {
   Cell,
 } from 'recharts';
 import type { HistoryPoint } from '@/lib/types';
+import { formatShortDate } from '@/lib/date';
 
 interface TSBChartProps {
   tsbHistory: HistoryPoint[];
@@ -26,11 +27,6 @@ function getTSBColor(value: number): string {
   if (value >= -10) return '#1D9E75'; // verde — bilanciato
   if (value >= -20) return '#f59e0b'; // arancio — in accumulo
   return '#ef4444';                    // rosso — sovraccarico
-}
-
-function formatDate(dateStr: string): string {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('it-IT', { day: 'numeric', month: 'short' });
 }
 
 function CustomTooltip({ active, payload, label }: {
@@ -54,7 +50,7 @@ export default function TSBChart({ tsbHistory }: TSBChartProps) {
   // Ultimi 30 giorni
   const last30 = tsbHistory.slice(-30).map((p) => ({
     ...p,
-    label: formatDate(p.date),
+    label: formatShortDate(p.date),
   }));
 
   return (

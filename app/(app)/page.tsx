@@ -33,28 +33,24 @@ export default async function HomePage() {
           label="CTL"
           value={fitness.ctl}
           delta={ctlDelta}
-          href="/ctl-atl"
           description="Fitness cronica — media carico allenamento 42 giorni"
         />
         <MetricCard
           label="ATL"
           value={fitness.atl}
           delta={atlDelta}
-          href="/ctl-atl"
           description="Fatica acuta — media carico allenamento 7 giorni"
         />
         <MetricCard
           label="TSB"
           value={fitness.tsb}
           delta={tsbDelta}
-          href="/ctl-atl"
           description="Forma — CTL meno ATL. Negativo = in carico"
         />
         <MetricCard
           label="HRV"
           value={wellness.hrv}
           unit="ms"
-          href="/hrv"
           description="Variabilità frequenza cardiaca mattutina"
         />
       </div>

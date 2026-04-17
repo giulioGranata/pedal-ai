@@ -1,9 +1,23 @@
 import { NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
 import type { ChatMessage, AthleteData } from '@/lib/types';
+import { COOKIE_NAME, verifyAuthToken } from '@/lib/auth';
+import { checkChatRateLimit } from '@/lib/rate-limit';
 
 export async function POST(req: Request) {
   try {
+    const cookieHeader = req.headers.get('cookie') ?? '';
+    const rawToken = cookieHeader
+      .split(';')
+      .map((cookie) => cookie.trim())
+      .find((cookie) => cookie.startsWith(`${COOKIE_NAME}=`))
+      ?.split('=')[1];
+    const token = rawToken ? decodeURIComponent(rawToken) : undefined;
+    const isAuthenticated = await verifyAuthToken(token);
+    if (!isAuthenticated) {
+      return NextResponse.json({ error: 'Non autorizzato' }, { status: 401 });
+    }
+
     const body = await req.json();
     const messages: ChatMessage[] = body.messages;
     const data: AthleteData = body.data;
@@ -14,6 +28,13 @@ export async function POST(req: Request) {
 
     if (!process.env.ANTHROPIC_API_KEY) {
        return NextResponse.json({ error: 'API KEY Claude non configurata' }, { status: 500 });
+    }
+
+    const forwarded = req.headers.get('x-forwarded-for') ?? '127.0.0.1';
+    const ip = forwarded.split(',')[0]?.trim() || '127.0.0.1';
+    const ratelimit = await checkChatRateLimit(`chat:${ip}`);
+    if (!ratelimit.success) {
+      return NextResponse.json({ error: 'Rate limit raggiunto. Riprova tra poco.' }, { status: 429 });
     }
 
     const anthropic = new Anthropic({
@@ -35,17 +56,18 @@ Regole:
 - Rispondi sempre in italiano
 - Sii diretto e conciso, come un coach reale
 - Quando menzioni zone di potenza usa Z1/Z2/Z3/Z4/Z5/Z6
-- Se ti chiedono un grafico, rispondi OVE POSSIBILE con un JSON strutturato così:
-  {"type":"chart","chartType":"line|bar","title":"...","data":[...],"xKey":"...","yKeys":["..."]}
-  seguito da una spiegazione testuale. Assicurati che il file JSON sia isolato e parta con '{'.
 - Non inventare dati che non hai
 - CTL alta = buona fitness, ATL alta = fatica accumulata, TSB negativo = in accumulo di carico`;
 
     // Stream della risposta tramite l'SDK ufficiale
     const stream = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514', // Versione richiesta dal prompt
+      model: 'claude-sonnet-4-6',
       max_tokens: 1500,
-      system: systemPrompt,
+      system: [{
+        type: 'text',
+        text: systemPrompt,
+        cache_control: { type: 'ephemeral' },
+      }],
       messages: messages.map(m => ({ role: m.role, content: m.content })),
       stream: true,
     });

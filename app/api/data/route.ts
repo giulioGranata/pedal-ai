@@ -3,7 +3,6 @@ import { getAthleteData } from '@/lib/data';
 
 // API route GET /api/data
 // Astrae la logica per il client se dovesse servire (es. route handler o chat)
-export const revalidate = 3600;
 
 export async function GET() {
   try {

@@ -8,7 +8,7 @@ interface MetricCardProps {
   value: number;
   unit?: string;
   delta?: number;        // variazione rispetto al giorno precedente
-  href: string;          // rotta di dettaglio
+  href?: string;         // rotta di dettaglio
   description: string;   // breve descrizione della metrica
 }
 
@@ -39,18 +39,17 @@ export default function MetricCard({
   href,
   description,
 }: MetricCardProps) {
-  return (
-    <Link
-      href={href}
-      className="
+  const className = `
         group block bg-white dark:bg-gray-900
         border border-gray-200 dark:border-gray-800
         rounded-xl p-4
         hover:border-[#1D9E75] dark:hover:border-[#1D9E75]
         hover:shadow-sm
         transition-all duration-200
-      "
-    >
+      `;
+
+  const content = (
+    <>
       {/* Label + freccia hover */}
       <div className="flex items-center justify-between mb-3">
         <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
@@ -78,6 +77,16 @@ export default function MetricCard({
 
       {/* Descrizione breve */}
       <p className="text-xs text-gray-400 dark:text-gray-500 leading-snug">{description}</p>
+    </>
+  );
+
+  if (!href) {
+    return <div className={className}>{content}</div>;
+  }
+
+  return (
+    <Link href={href} className={className}>
+      {content}
     </Link>
   );
 }

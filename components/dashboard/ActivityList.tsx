@@ -2,6 +2,7 @@
 // Server Component
 
 import type { Activity } from '@/lib/types';
+import { formatWeekdayShortDate, parseISODateUTC } from '@/lib/date';
 
 interface ActivityListProps {
   activities: Activity[];
@@ -19,12 +20,6 @@ function formatDistance(meters: number): string {
   return `${(meters / 1000).toFixed(0)} km`;
 }
 
-// Formatta la data in italiano
-function formatDate(dateStr: string): string {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('it-IT', { weekday: 'short', day: 'numeric', month: 'short' });
-}
-
 // Colore TSS in base all'intensità
 function tssColor(tss: number): string {
   if (tss >= 150) return 'text-red-500 dark:text-red-400';
@@ -36,7 +31,7 @@ function tssColor(tss: number): string {
 export default function ActivityList({ activities }: ActivityListProps) {
   // Ordina per data decrescente (più recente in cima) e mostra le ultime 5
   const recent = [...activities]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort((a, b) => parseISODateUTC(b.date).getTime() - parseISODateUTC(a.date).getTime())
     .slice(0, 5);
 
   return (
@@ -44,6 +39,12 @@ export default function ActivityList({ activities }: ActivityListProps) {
       <h2 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
         Attività recenti
       </h2>
+
+      {recent.length === 0 && (
+        <div className="rounded-lg border border-dashed border-gray-700 p-6 text-sm text-gray-400">
+          Nessuna attività disponibile in questo periodo. Ottimo momento per recuperare.
+        </div>
+      )}
 
       <div className="space-y-0.5">
         {recent.map((activity, i) => (
@@ -60,7 +61,7 @@ export default function ActivityList({ activities }: ActivityListProps) {
                 {activity.name}
               </p>
               <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
-                {formatDate(activity.date)}
+                {formatWeekdayShortDate(activity.date)}
               </p>
             </div>
 
