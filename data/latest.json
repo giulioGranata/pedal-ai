@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-20T16:05:54Z",
+  "updated_at": "2026-04-21T11:03:46Z",
   "athlete": {
     "id": "i153108",
     "name": "Giulio Granata"
@@ -754,13 +754,6 @@
     "energy": 3,
     "history": [
       {
-        "date": "2026-03-22",
-        "hrv": null,
-        "resting_hr": 135,
-        "sleep_hours": null,
-        "energy": null
-      },
-      {
         "date": "2026-03-23",
         "hrv": null,
         "resting_hr": 127,
@@ -962,10 +955,28 @@
         "resting_hr": null,
         "sleep_hours": null,
         "energy": null
+      },
+      {
+        "date": "2026-04-21",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
       }
     ]
   },
   "activities": [
+    {
+      "id": "i141615991",
+      "date": "2026-04-21",
+      "name": "Zwift - Pacer",
+      "duration_seconds": 3641,
+      "distance_meters": 39172.85,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
     {
       "id": "i141327812",
       "date": "2026-04-20",
@@ -1170,17 +1181,6 @@
       "name": "Zwift - Pacer",
       "duration_seconds": 4085,
       "distance_meters": 41765.98,
-      "normalized_power": 0,
-      "intensity_factor": 0,
-      "tss": 0,
-      "type": "VirtualRide"
-    },
-    {
-      "id": "i136610069",
-      "date": "2026-04-02",
-      "name": "Zwift - Pacer",
-      "duration_seconds": 4527,
-      "distance_meters": 50517.69,
       "normalized_power": 0,
       "intensity_factor": 0,
       "tss": 0,
