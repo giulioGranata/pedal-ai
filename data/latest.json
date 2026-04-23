@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-22T16:07:02Z",
+  "updated_at": "2026-04-23T11:05:06Z",
   "athlete": {
     "id": "i153108",
     "name": "Giulio Granata"
@@ -754,13 +754,6 @@
     "energy": 3,
     "history": [
       {
-        "date": "2026-03-24",
-        "hrv": null,
-        "resting_hr": 113,
-        "sleep_hours": null,
-        "energy": null
-      },
-      {
         "date": "2026-03-25",
         "hrv": null,
         "resting_hr": null,
@@ -962,10 +955,28 @@
         "resting_hr": null,
         "sleep_hours": null,
         "energy": null
+      },
+      {
+        "date": "2026-04-23",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
       }
     ]
   },
   "activities": [
+    {
+      "id": "i142193347",
+      "date": "2026-04-23",
+      "name": "Zwift - Rulli: Forza Resistente Tempo Progressiva",
+      "duration_seconds": 4877,
+      "distance_meters": 53454.77,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
     {
       "id": "i141921268",
       "date": "2026-04-22",
@@ -1170,17 +1181,6 @@
       "name": "Milano Ciclismo su strada",
       "duration_seconds": 1559,
       "distance_meters": 12035.97,
-      "normalized_power": 0,
-      "intensity_factor": 0,
-      "tss": 0,
-      "type": "Ride"
-    },
-    {
-      "id": "i137095948",
-      "date": "2026-04-04",
-      "name": "Milano Ciclismo su strada",
-      "duration_seconds": 7448,
-      "distance_meters": 64358.19,
       "normalized_power": 0,
       "intensity_factor": 0,
       "tss": 0,
