@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-23T16:26:45Z",
+  "updated_at": "2026-04-24T11:04:02Z",
   "athlete": {
     "id": "i153108",
     "name": "Giulio Granata"
@@ -749,17 +749,10 @@
   },
   "wellness": {
     "hrv": null,
-    "resting_hr": null,
+    "resting_hr": 95,
     "sleep_hours": 0,
     "energy": 3,
     "history": [
-      {
-        "date": "2026-03-25",
-        "hrv": null,
-        "resting_hr": null,
-        "sleep_hours": null,
-        "energy": null
-      },
       {
         "date": "2026-03-26",
         "hrv": null,
@@ -962,10 +955,28 @@
         "resting_hr": null,
         "sleep_hours": null,
         "energy": null
+      },
+      {
+        "date": "2026-04-24",
+        "hrv": null,
+        "resting_hr": 95,
+        "sleep_hours": null,
+        "energy": null
       }
     ]
   },
   "activities": [
+    {
+      "id": "i142460670",
+      "date": "2026-04-24",
+      "name": "Milano Ciclismo su strada",
+      "duration_seconds": 3940,
+      "distance_meters": 33404.01,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "Ride"
+    },
     {
       "id": "i142193347",
       "date": "2026-04-23",
@@ -1174,17 +1185,6 @@
       "intensity_factor": 0,
       "tss": 0,
       "type": "VirtualRide"
-    },
-    {
-      "id": "i137309458",
-      "date": "2026-04-05",
-      "name": "Milano Ciclismo su strada",
-      "duration_seconds": 1559,
-      "distance_meters": 12035.97,
-      "normalized_power": 0,
-      "intensity_factor": 0,
-      "tss": 0,
-      "type": "Ride"
     }
   ]
 }
