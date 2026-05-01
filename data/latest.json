@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-30T16:16:59Z",
+  "updated_at": "2026-05-01T11:04:07Z",
   "athlete": {
     "id": "i153108",
     "name": "Giulio Granata"
@@ -754,13 +754,6 @@
     "energy": 3,
     "history": [
       {
-        "date": "2026-04-01",
-        "hrv": null,
-        "resting_hr": null,
-        "sleep_hours": null,
-        "energy": null
-      },
-      {
         "date": "2026-04-02",
         "hrv": null,
         "resting_hr": null,
@@ -962,10 +955,28 @@
         "resting_hr": null,
         "sleep_hours": null,
         "energy": null
+      },
+      {
+        "date": "2026-05-01",
+        "hrv": null,
+        "resting_hr": null,
+        "sleep_hours": null,
+        "energy": null
       }
     ]
   },
   "activities": [
+    {
+      "id": "i144461449",
+      "date": "2026-05-01",
+      "name": "Zwift - 0",
+      "duration_seconds": 3722,
+      "distance_meters": 38352.78,
+      "normalized_power": 0,
+      "intensity_factor": 0,
+      "tss": 0,
+      "type": "VirtualRide"
+    },
     {
       "id": "i144225873",
       "date": "2026-04-30",
@@ -1170,17 +1181,6 @@
       "name": "Zwift - Rulli: Forza regressiva e Forza Esplosiva",
       "duration_seconds": 5020,
       "distance_meters": 56154.39,
-      "normalized_power": 0,
-      "intensity_factor": 0,
-      "tss": 0,
-      "type": "VirtualRide"
-    },
-    {
-      "id": "i138817867",
-      "date": "2026-04-11",
-      "name": "Zwift - Rulli: Simulazione Distanza Specifica (1)",
-      "duration_seconds": 5249,
-      "distance_meters": 53960.84,
       "normalized_power": 0,
       "intensity_factor": 0,
       "tss": 0,
